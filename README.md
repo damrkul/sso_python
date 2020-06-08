@@ -20,6 +20,13 @@ I used PHP, with the Codeigniter framework (MVC) for my websites.  I could have 
 There is no actual Database for this application.  I could easily add a MySQL or MongoDB but the point of this project wasn't really this, and wanted to focus on the actual SSO.    I am simply using a few python dictionary objects as my 'database' .
 
 
+## Live Demo
+You can go to any of these sites for a live demo.
+- http://www.rekous.com
+- http://www.prekl.com
+- http://www.rekous.net
+
+
 
 ## How It works
 
