@@ -26,7 +26,7 @@ You can go to any of these sites for a live demo.
 - http://www.prekl.com
 - http://www.rekous.net
 
-
+- Autentication Server:  http://161.35.178.32:8888
 
 ## How It works
 
