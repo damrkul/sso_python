@@ -106,7 +106,10 @@ class authenticate(tornado.web.RequestHandler):
         if self.get_argument("username") in users_list:
             if users_list[username]['password'] == password:
                 token = retrieveToken(username)
-        
+                
+        if token is None:
+            token = 'invalid'
+            
         if 'Mozilla' in self.request.headers.get("User-Agent"):
             url = self.get_argument("url")
 
