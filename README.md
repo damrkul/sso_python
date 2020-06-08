@@ -57,8 +57,8 @@ I have 3 seperate webservers running with different domains.   The codebase are 
 
 
 **Current gits**:
-https://github.com/damrkul/sso_python
-https://github.com/damrkul/sso_website
+- https://github.com/damrkul/sso_python
+- https://github.com/damrkul/sso_website
 
 
 Main Files to look at are here:
