@@ -1,9 +1,27 @@
 # sso_python
 
-This was a quick excercise where I was asked about Single Sign On (SSO).   I thought about it  for a bit and I thought it would be fun to see if I could get it done.
+## Overview
+During an interview I was asked about how I would create a Single Sign On.   I thought it was an interesting topic, so I decided to give my self a quick excercise to see if I could do it.
 
 
-The way I've created this SSO was create a little service , via RestFul API.  I used Python Tornado as my webserver. 
+I broke this application into 3 Parts.
+
+- Authentication REST Service
+- Website 1
+- Website 2
+
+
+I used Python for my Authentication Service  via Tornado module. 
+
+I used PHP, with the Codeigniter framework (MVC) for my websites.  I could have used any other language, but I decided on this one because it is very quick to throw stuff together.
+
+
+## Authentcation Server Database
+There is no actual Database for this application.  I could easily add a MySQL or MongoDB but the point of this project wasn't really this, and wanted to focus on the actual SSO.    I am simply using a few python dictionary objects as my 'database' .
+
+
+
+## How It works
 
 So all in all the program works like this.
 
@@ -20,9 +38,9 @@ So all in all the program works like this.
 6) Because The token has removed,  Any site that that goes to a new page, will force user to be logged out because */check_login* will return a token of *invalid*
  
 
-
+### EndPoints 
 The SSO RestAPI  has currently 7 endpoints.
-````
+```
         (r"/users", users),
         (r"/adduser", adduser),
         (r"/authenticate", authenticate),
@@ -33,17 +51,22 @@ The SSO RestAPI  has currently 7 endpoints.
 ```
 
 
-Current gits:
+
+## WebSites
+I have 3 seperate webservers running with different domains.   The codebase are all identical.  The only thing I have had to change is the *application/config/config.php* and modify the *$config['base_url']*
+
+
+*Current gits*:
 https://github.com/damrkul/sso_python
 https://github.com/damrkul/sso_website
 
 
-## WebSites
-Just to create a proof of concept,  I decided to use codeigniter which is a php Model-View-Controller framework.
-
-I have 3 seperate webservers running with different domains.   The codebase are all identical.  The only thing I have had to change is the *application/config/config.php* and modify the *$config['base_url']*
-
 Main Files to look at are here:
+
+*Authentication Server:*
+- https://github.com/damrkul/sso_python/blob/master/sso.py
+
+*WebServer:*
 - https://github.com/damrkul/sso_website/blob/master/application/controllers/App.php
 - https://github.com/damrkul/sso_website/tree/master/application/views
 
